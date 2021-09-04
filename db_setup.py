@@ -1,5 +1,14 @@
+# TO DOs:
+# password handling
+# move calculations into DB, rather than in the transform operation
+# use sqlalchemy for better abstraction?
+# check a better way to download file from SFTP
+# isolate files from input
+
 from getpass import getpass
 from mysql.connector import connect, Error, errorcode
+import my_data
+
 
 # specify MySQL server details
 connection_config = {
@@ -14,7 +23,7 @@ db_name = "dgt_database"
 # provide table name and description
 table_name = "master_stock_list"
 table_description = "(" \
-                    " `SKU CODE (UNIQUE)` varchar(50)," \
+                    " `SKU CODE (UNIQUE)` varchar(50) NOT NULL," \
                     " `ITEM CODE` varchar(50)," \
                     " `IMAGE SKU 1` varchar(50),"\
                     " `IMAGE SKU 2`	varchar(50)," \
@@ -32,7 +41,7 @@ table_description = "(" \
                     " `CONSTRUCTION TYPE` varchar(50)," \
                     " `MATERIAL` varchar(50)," \
                     " `SUPPLIER LOCATION` varchar(50)," \
-                    " `WHEEL OWNER`	varchar(50)," \
+                    " `WHEEL OWNER`	varchar(50) NOT NULL," \
                     " `BRAND` varchar(50)," \
                     " `BRAND LOGO` varchar(512)," \
                     " `WHEEL MODEL` varchar(50)," \
@@ -44,9 +53,9 @@ table_description = "(" \
                     " `MAX BOLT (IF BLANK)` smallint(4)," \
                     " `MIN LUG (IF BLANK)` smallint(4)," \
                     " `MAX LUG (IF BLANK)` smallint(4)," \
-                    " `ET` smallint(4)," \
-                    " `MIN ET` smallint(4)," \
-                    " `MAX ET` smallint(4)," \
+                    " `ET` varchar(50)," \
+                    " `MIN ET` varchar(50)," \
+                    " `MAX ET` varchar(50)," \
                     " `CB` decimal(10,2)," \
                     " `COLOUR` varchar(50)," \
                     " `FINISH` varchar(50)," \
@@ -75,19 +84,9 @@ table_description = "(" \
                     " `BRAND VIDEO 2` varchar(512)," \
                     " `WHEEL DESCRIPTION` varchar(512)," \
                     " `SEO KEYWORDS` varchar(512)," \
-                    " `GROUP IDENTIFIER` varchar(50)"\
+                    " `GROUP IDENTIFIER` varchar(200)," \
+                    " PRIMARY KEY (`SKU CODE (UNIQUE)`,`WHEEL OWNER`)" \
                     ")"
-
-# TABLES['employees'] = (
-#     "CREATE TABLE `employees` ("
-#     "  `emp_no` int(11) NOT NULL AUTO_INCREMENT,"
-#     "  `birth_date` date NOT NULL,"
-#     "  `first_name` varchar(14) NOT NULL,"
-#     "  `last_name` varchar(16) NOT NULL,"
-#     "  `gender` enum('M','F') NOT NULL,"
-#     "  `hire_date` date NOT NULL,"
-#     "  PRIMARY KEY (`emp_no`)"
-#     ") ENGINE=InnoDB")
 
 # create database function
 def create_database(db,cursor,name):
@@ -121,6 +120,7 @@ try:
 
     # create the table if it does not exist
     try:
+        # mycursor.execute("DROP TABLE IF EXISTS {}".format(table_name))
         print("Creating table {}: ".format(table_name), end='')
         sql = "CREATE TABLE " + table_name + " " + table_description
         mycursor.execute(sql)
@@ -131,12 +131,6 @@ try:
             print(err.msg)
     else:
         print("OK")
-
-    # mycursor = mydb.cursor()
-    # sql = "CREATE TABLE IF NOT EXISTS " + table_name + msl_structure
-    # print(sql)
-    # mycursor.execute(sql)
-
 except Error as e:
     print("Error while connecting to MySQL", e)
 finally:
