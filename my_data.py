@@ -1,4 +1,8 @@
 from sqlalchemy import MetaData, Table, Column, SmallInteger, String, Float, PrimaryKeyConstraint
+import pysftp
+import warnings
+
+warnings.filterwarnings('ignore')
 
 # MySQL database details
 db_conn_config = {
@@ -7,6 +11,25 @@ db_conn_config = {
     'host': 'localhost',
     'database': 'dgt_database'
 }
+
+# WP SFTP server details
+wp_conn_config = {
+    'host': 'sftp.wheelpros.com',
+    'username': 'Dgt_wheels1',
+    'password': 'Alphabravo01!',
+}
+wp_remote_path = "/CommonFeed/EUR/WHEEL/wheelInvPriceData.csv"
+
+# DGT SFTP server details
+ecom_conn_config = {
+    'host': '136.244.69.20',
+    'username': 'csvsftpuser',
+    'password': 'Y8ZQ4[QMP[?FobU#!pWW',
+}
+ecom_remote_path = "/home/csvsftpuser/master_stock_list.csv"
+# Disable hot key checking
+cnopts = pysftp.CnOpts()
+cnopts.hostkeys = None
 
 # Suppliers list
 suppliers_list = {
@@ -82,79 +105,3 @@ master_stock_list = Table(
     Column('GROUP IDENTIFIER', String(500)),
     PrimaryKeyConstraint('SKU CODE (UNIQUE)', 'WHEEL OWNER')
 )
-
-
-
-# using MSQAlchemy ORM to build table
-# class Master_stock_list(Base):
-#     __tablename__ = 'master_stock_list'
-#
-#     'SKU CODE (UNIQUE)' = Column(String(50), primary_key=True, nullable=False)
-#     'ITEM CODE' = Column(String(200))
-#     'IMAGE SKU 1' = Column(String(50))
-#     'IMAGE SKU 2' = Column(String(50))
-#     'IMAGE SKU 3' = Column(String(50))
-#     'IMAGE SKU 4' = Column(String(50))
-#     'IMAGE SKU 5' = Column(String(50))
-#     'IMAGE SOURCE' = Column(String(50))
-#     'IMAGE 1 URL' = Column(String(500))
-#     'IMAGE 2 URL' = Column(String(500))
-#     'IMAGE 3 URL' = Column(String(500))
-#     'IMAGE 4 URL' = Column(String(500))
-#     'IMAGE 5 URL' = Column(String(500))
-#     'VIDEO 1 URL' = Column(String(500))
-#     'STOCK STATUS' = Column(String(50))
-#     'CONSTRUCTION TYPE' = Column(String(50))
-#     'MATERIAL' = Column(String(50))
-#     'SUPPLIER LOCATION' = Column(String(50))
-#     'WHEEL OWNER' = Column(String(50), nullable=False)
-#     'BRAND' = Column(String(50))
-#     'BRAND LOGO' = Column(String(500))
-#     'WHEEL MODEL' = Column(String(50))
-#     'SIZE' = Column(String(50))
-#     'J WIDTH' = Column(String(50))
-#     'SIZE DESC' = Column(String(50))
-#     'PCD' = Column(String(50))
-#     'MIN BOLT (IF BLANK)' Column(SmallInteger)
-#     'MAX BOLT (IF BLANK)' = Column(SmallInteger)
-#     'MIN LUG (IF BLANK)' = Column(SmallInteger)
-#     'MAX LUG (IF BLANK)' = Column(SmallInteger)
-#     'ET' = Column(String(50))
-#     'MIN ET' = Column(String(50))
-#     'MAX ET' = Column(String(50))
-#     'CB' = Column(Float)
-#     'COLOUR' = Column(String(50))
-#     'FINISH' = Column(String(50))
-#     'WEIGHT LOAD (KG)' = Column(Float)
-#     'WHEEL WEIGHT (KG)' = Column(Float)
-#     'BOLT SEATING' = Column(SmallInteger)
-#     'STAGGERED CODE' = Column(String(50))
-#     'STAGGERED OPTION' = Column(String(50))
-#     'STAGG UNIQUE SKU LOOKUP' = Column(String(50))
-#     'STAGGERED POSITION' = Column(String(50))
-#     'STAGGERED FRONT FILTER' = Column(String(50))
-#     'QUANTITY (SETS AVAILABLE)' = Column(SmallInteger)
-#     'SHIPPING WEIGHT' = Column(SmallInteger)
-#     'SHIPPING (DOMESTIC)' = Column(Float)
-#     'SHIPPING (INTERNATIONAL)' = Column(Float)
-#     'MSRP' = Column(Float)
-#     'PRICE MARK UP' = Column(Float)
-#     'TOTAL UNIQUE PRICE (MSRP + MARGIN)' = Column(Float)
-#     'B STOCK IDENTIFIER' = Column(String(50))
-#     'DISCOUNTED PRICE' = Column(Float)
-#     'SINGLE OR SET FILTER' = Column(String(50))
-#     'IMPORT / DISPLAY FILTER' = Column(String(50))
-#     'BRAND LOGO_[0]' = Column(String(500))
-#     'BRAND BANNER' = Column(String(500))
-#     'BRAND VIDEO 1' = Column(String(500))
-#     'BRAND VIDEO 2' = Column(String(500))
-#     'WHEEL DESCRIPTION' = Column(String(500))
-#     'SEO KEYWORDS' = Column(String(500))
-#     'GROUP IDENTIFIER' = Column(String(500))
-#     __table_args__ = (
-#         PrimaryKeyConstraint('SKU CODE (UNIQUE)', 'WHEEL OWNER'),
-#         {},
-#     )
-#
-#     def __repr__(self):
-#         return f"User(id={self.'SKU CODE (UNIQUE)'!r}, name={self.'ITEM CODE'!r}, fullname={self.'IMAGE SKU 1'!r},...)"

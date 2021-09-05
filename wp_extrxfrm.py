@@ -1,22 +1,10 @@
 # this module connects to the supplier server, retrieves
 # the updated product list and transforms it according to
 # the master stock list format
-
 import pysftp
 import pandas as pd
-import sqlalchemy
 
 # EXTRACT: connect to server and retrieve updated table
-# SFTP server details
-wp_conn_config = {
-    'host': 'sftp.wheelpros.com',
-    'username': 'Dgt_wheels1',
-    'password': 'Alphabravo01!',
-}
-wp_remote_path = "/CommonFeed/EUR/WHEEL/wheelInvPriceData.csv"
-# Disable hot key checking
-cnopts = pysftp.CnOpts()
-cnopts.hostkeys = None
 # Connect to SFTP server and import data into a dataframe
 def wp_extr(connection_config, cnopts, remote_path):
     print("Connecting to {}...".format(connection_config['host']), end='')
