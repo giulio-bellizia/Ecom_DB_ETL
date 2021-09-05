@@ -13,7 +13,7 @@ def wp_extr(connection_config, cnopts, remote_path):
             print("{} found.".format(remote_path))
         # copy destination file into a pandas dataframe
         with mysftp.open(remote_path, bufsize=32768) as csv_file:
-            print("Importing file...", end='')
+            print("Importing latest data from supplier...", end='')
             product_list = pd.read_csv(csv_file)
             print("{} imported.".format(remote_path))
             mysftp.close()
