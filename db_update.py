@@ -22,12 +22,12 @@ cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None
 
 # # establish connection to SFTP server
-# print("Connecting to {}...".format(connection_config['host']))
-# with pysftp.Connection(**connection_config, cnopts=cnopts) as mysftp:
-#     if mysftp.exists(remote_path):
+# print("Connecting to {}...".format(wp_conn_config['host']))
+# with pysftp.Connection(**wp_conn_config, cnopts=cnopts) as mysftp:
+#     if mysftp.exists(wp_remote_path):
 #         print("Destination file found!")
 #     # copy destination file into a pandas dataframe
-#     with mysftp.open(remote_path) as csv_file:
+#     with mysftp.open(wp_remote_path) as csv_file:
 #         print("Copying destination file...")
 #         df = pd.read_csv(csv_file)
 #         print("destination file in memory.")

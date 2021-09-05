@@ -1,12 +1,16 @@
 from sqlalchemy import MetaData, Table, Column, SmallInteger, String, Float, PrimaryKeyConstraint
 
-
 # MySQL database details
 db_conn_config = {
     'user': 'Giulio',
     'password': 'Capuozz0123!',
     'host': 'localhost',
     'database': 'dgt_database'
+}
+
+# Suppliers list
+suppliers_list = {
+    'WHEEL PROS': 'WP',
 }
 
 # database metadata
