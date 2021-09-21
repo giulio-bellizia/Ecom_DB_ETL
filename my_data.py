@@ -20,6 +20,9 @@ wp_conn_config = {
 }
 wp_remote_path = "/CommonFeed/EUR/WHEEL/wheelInvPriceData.csv"
 
+# Japan Racing url with api key to get product list
+jr_url = 'https://b2b.wheeltrade.pl/en/xmlapi/12/2/utf8/ee612fdd-4845-4c4e-b795-249514fc961f'
+
 # DGT SFTP server details
 ecom_conn_config = {
     'host': '136.244.69.20',
@@ -39,7 +42,7 @@ suppliers_list = {
 # database metadata
 db_metadata = MetaData()
 master_stock_list = Table(
-    "master_stock_list",
+    'master_stock_list',
     db_metadata,
     Column('SKU CODE (UNIQUE)', String(50), nullable=False),
     Column('ITEM CODE', String(200)),
@@ -66,15 +69,15 @@ master_stock_list = Table(
     Column('SIZE', String(50)),
     Column('J WIDTH', String(50)),
     Column('SIZE DESC', String(50)),
-    Column('PCD', String(50)),
+    Column('PCD', String(500)),
     Column('MIN BOLT (IF BLANK)', SmallInteger),
     Column('MAX BOLT (IF BLANK)', SmallInteger),
     Column('MIN LUG (IF BLANK)', SmallInteger),
     Column('MAX LUG (IF BLANK)', SmallInteger),
-    Column('ET', String(50)),
+    Column('ET', String(500)),
     Column('MIN ET', String(50)),
     Column('MAX ET', String(50)),
-    Column('CB', Float),
+    Column('CB', String(500)),
     Column('COLOUR', String(50)),
     Column('FINISH', String(50)),
     Column('WEIGHT LOAD (KG)', Float),

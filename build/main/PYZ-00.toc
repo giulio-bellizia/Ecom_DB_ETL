@@ -4,9 +4,21 @@
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.requirements',
+  ('pkg_resources._vendor.packaging',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('__future__',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\__future__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.__about__',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
    'PYMODULE'),
   ('typing',
    'C:\\Program '
@@ -16,25 +28,45 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\contextlib.py',
    'PYMODULE'),
-  ('urllib.parse',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\urllib\\parse.py',
-   'PYMODULE'),
-  ('urllib',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\urllib\\__init__.py',
-   'PYMODULE'),
-  ('string',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\string.py',
-   'PYMODULE'),
-  ('__future__',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\__future__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.utils',
+  ('pkg_resources._vendor',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.appdirs',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
+   'PYMODULE'),
+  ('ctypes',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('struct',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\struct.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._compat',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._typing',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_typing.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
    'PYMODULE'),
   ('pkg_resources._vendor.pyparsing',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
@@ -236,9 +268,17 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\email\\_parseaddr.py',
    'PYMODULE'),
+  ('urllib.parse',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\urllib\\parse.py',
+   'PYMODULE'),
   ('email._encoded_words',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('urllib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\urllib\\__init__.py',
    'PYMODULE'),
   ('email.header',
    'C:\\Program '
@@ -323,14 +363,6 @@
   ('multiprocessing.sharedctypes',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\multiprocessing\\sharedctypes.py',
-   'PYMODULE'),
-  ('ctypes',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ctypes\\__init__.py',
-   'PYMODULE'),
-  ('ctypes._endian',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ctypes\\_endian.py',
    'PYMODULE'),
   ('multiprocessing.pool',
    'C:\\Program '
@@ -640,10 +672,6 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\_compat_pickle.py',
    'PYMODULE'),
-  ('struct',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\struct.py',
-   'PYMODULE'),
   ('random',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\random.py',
@@ -772,9 +800,9 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\copy.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.appdirs',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
+  ('string',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\string.py',
    'PYMODULE'),
   ('pkg_resources._vendor.packaging.tags',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
@@ -848,41 +876,13 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\distutils\\errors.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.specifiers',
+  ('pkg_resources._vendor.packaging.requirements',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.version',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.markers',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._compat',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._typing',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_typing.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
    'PYMODULE'),
   ('pkg_resources._vendor.packaging._structures',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.__about__',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
    'PYMODULE'),
   ('sysconfig',
    'C:\\Program '
@@ -3332,13 +3332,9 @@
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\__init__.py',
    'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl._conditional',
+  ('cryptography.hazmat.bindings.openssl',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl.binding',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
    'PYMODULE'),
   ('cryptography.hazmat.bindings',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
@@ -3348,17 +3344,21 @@
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\__init__.py',
    'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl.binding',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'PYMODULE'),
   ('cryptography.exceptions',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\exceptions.py',
    'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl',
+  ('cryptography.hazmat.bindings.openssl._conditional',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
    'PYMODULE'),
-  ('cryptography.hazmat.backends.interfaces',
+  ('cryptography.hazmat.backends.openssl',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\interfaces.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py',
    'PYMODULE'),
   ('cryptography.hazmat.backends.openssl.encode_asn1',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
@@ -3384,9 +3384,73 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ipaddress.py',
    'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.ocsp',
+  ('cryptography.hazmat.backends.openssl.ed25519',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ocsp.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed25519',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dh',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.rsa',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._asymmetric',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed448',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ec',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dsa',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.utils',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat._der',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\_der.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._serialization',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.hmac',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\hmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.constant_time',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.interfaces',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\interfaces.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.cmac',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\cmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.backend',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
    'PYMODULE'),
   ('cryptography.x509.ocsp',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
@@ -3408,113 +3472,9 @@
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\x509\\certificate_transparency.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.constant_time',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
-   'PYMODULE'),
-  ('cryptography.hazmat._der',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\_der.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.rsa',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.utils',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives._asymmetric',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives._serialization',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ed448',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ed25519',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ec',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.dsa',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.dh',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
-   'PYMODULE'),
   ('cryptography.hazmat._types',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\_types.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.utils',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\utils.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.decode_asn1',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\decode_asn1.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.dh',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\dh.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.x448',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.x448',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.ec',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ec.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.ed25519',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ed25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.hashes',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\hashes.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.ed448',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ed448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.x25519',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.x25519',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.x509',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x509.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.poly1305',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\poly1305.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.backend',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
    'PYMODULE'),
   ('cryptography.hazmat.primitives.serialization.ssh',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
@@ -3536,25 +3496,33 @@
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
    'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ocsp',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ocsp.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.x448',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x448',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.dh',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\dh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.decode_asn1',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\decode_asn1.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.utils',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\utils.py',
+   'PYMODULE'),
   ('cryptography.hazmat.backends.openssl.rsa',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\rsa.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.ciphers',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ciphers.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.dsa',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\dsa.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.cmac',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\cmac.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.hmac',
-   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\hmac.py',
    'PYMODULE'),
   ('cryptography.hazmat.backends.openssl.aead',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
@@ -3564,9 +3532,41 @@
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
    'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\aead.py',
    'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl',
+  ('cryptography.hazmat.backends.openssl.x509',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
-   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py',
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x509.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.poly1305',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\poly1305.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.hashes',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\hashes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ed448',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ed448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.dsa',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\dsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ec',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ciphers',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ciphers.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.x25519',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x25519',
+   'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '
+   'ventures\\pyre\\projects\\dgt_ecom\\venv\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
    'PYMODULE'),
   ('cryptography.x509',
    'c:\\users\\evgenia\\desktop\\onedrive\\2. business\\0. new '

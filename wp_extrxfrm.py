@@ -3,6 +3,7 @@
 # the master stock list format
 import pysftp
 import pandas as pd
+from sqlalchemy import delete
 
 # EXTRACT: connect to server and retrieve updated table
 # Connect to SFTP server and import data into a dataframe
@@ -19,10 +20,8 @@ def wp_extr(connection_config, cnopts, remote_path):
             mysftp.close()
     return product_list
 
-# TRANSFORM: modify table to conform with the master
-# stock list table in the database
+# TRANSFORM: rename/transform/add/drop columns as per database table
 def wp_xfrm(df):
-    # rename columns as per table in database and drop columns not renamed
     col_names = {
         'PartNumber':       'SKU CODE (UNIQUE)',
         'ImageURL':         'IMAGE 1 URL',
@@ -62,3 +61,17 @@ def wp_xfrm(df):
         return my_str
     df['PCD'] = df['PCD'].apply(PCD_convert)
     return df
+
+# Update the database
+def wp_update(conn_config,cnopts,remote_path,db_engine,db_table,fn_extr, fn_xfrm):
+    # Extract latest product list from suppliers
+    df_extr = fn_extr(conn_config, cnopts, remote_path)
+    # Transform imported supplier product list to fit master stock list
+    df_extrxfrm = fn_xfrm(df_extr)
+    # Delete values from old supplier list from table
+    stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == 'WHEEL PROS')
+    with db_engine.begin() as conn:
+        conn.execute(stmt)
+    # Load the updated supplier list into the database
+    df_extrxfrm.to_sql(db_table.name, con=db_engine, if_exists='append', index=False, chunksize=1024)
+    print("Database updated with latest Wheel Pros products")
