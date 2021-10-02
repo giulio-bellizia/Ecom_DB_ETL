@@ -5,6 +5,8 @@ import requests
 import pandas as pd
 import io
 from sqlalchemy import delete
+from my_data import jr_url
+import re
 
 # EXTRACT: connect to server and import updated product table into a dataframe
 def jr_extr(url):
@@ -37,9 +39,9 @@ def jr_xfrm(df):
     df['ITEM CODE'] = 'JR-' + df['SKU CODE (UNIQUE)']
     df['IMAGE SKU 1'] = df['ITEM CODE']
     df['WHEEL OWNER'] = 'Japan Racing'
-    df['SIZE'] = df['SIZE'].str[:-2]
-    df['J WIDTH'] = df['J WIDTH'].str[:-2]
+    df['SIZE'] = df['SIZE'].apply(lambda x: re.sub("[^0-9.]", "", x))
     df['J WIDTH'] = df['J WIDTH'].str.replace(',', '.')
+    df['J WIDTH'] = df['J WIDTH'].apply(lambda x: re.sub("[^0-9.]", "", x))
     df['PCD'] = df['PCD'].str.replace('x', '/')
     df['PCD'] = df['PCD'].str.replace(', ', '|')
     df['GROUP IDENTIFIER'] = df['BRAND'] + ' ' + df['WHEEL MODEL'] + ' ' + df['COLOUR']
@@ -50,7 +52,7 @@ def jr_xfrm(df):
     df['ET'] = df['ET'].str.replace(', ', '|')
     df['IMAGE SOURCE'] = 'EXTERNAL_1'
     df['STOCK STATUS'] = 'PRE-ORDER'
-    df['SIZE DESC'] = df['SIZE'] + 'X' + df['J WIDTH']
+    df['SIZE DESC'] = df['J WIDTH'] + 'X' + df['SIZE']
     df['CB'] = df['CB'].str.replace(', ', '|')
     return df
 
@@ -67,9 +69,3 @@ def jr_update(url,db_engine,db_table,fn_extr, fn_xfrm):
     # Load the updated supplier list into the database
     df_extrxfrm.to_sql(db_table.name, con=db_engine, if_exists='append', index=False, chunksize=1024)
     print("Database updated with latest Japan Racing products")
-
-
-
-# df = jr_extr(jr_url)
-# df = jr_xfrm(df)
-# df.to_csv('test', index=False)

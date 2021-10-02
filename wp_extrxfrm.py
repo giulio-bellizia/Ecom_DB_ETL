@@ -58,6 +58,10 @@ def wp_xfrm(df):
                 my_str = my_str.replace('X', '/')
             else:
                 my_str = my_str.replace('X', '/')
+            my_str = [list(map(float, sublist.split('/'))) for sublist in my_str.split('|')]
+            my_str = [[x[0], round(x[1] * 25.4,2)] if x[1] < 50 else [x[0], x[1]] for x in my_str]
+            my_str = '|'.join(['/'.join(map(str, sublist)) for sublist in my_str]).replace('.0', '')
+            my_str = my_str.replace('107.95','108')
         return my_str
     df['PCD'] = df['PCD'].apply(PCD_convert)
     return df
@@ -68,6 +72,7 @@ def wp_update(conn_config,cnopts,remote_path,db_engine,db_table,fn_extr, fn_xfrm
     df_extr = fn_extr(conn_config, cnopts, remote_path)
     # Transform imported supplier product list to fit master stock list
     df_extrxfrm = fn_xfrm(df_extr)
+    # df_extrxfrm.to_csv('sml_preDB', index=False) # delete this in prod
     # Delete values from old supplier list from table
     stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == 'WHEEL PROS')
     with db_engine.begin() as conn:

@@ -23,6 +23,9 @@ wp_remote_path = "/CommonFeed/EUR/WHEEL/wheelInvPriceData.csv"
 # Japan Racing url with api key to get product list
 jr_url = 'https://b2b.wheeltrade.pl/en/xmlapi/12/2/utf8/ee612fdd-4845-4c4e-b795-249514fc961f'
 
+# Wolfrace url to get product list
+wr_url = 'https://www.wolfrace.co.uk/trade/wolfrace_trade_stock.csv'
+
 # DGT SFTP server details
 ecom_conn_config = {
     'host': '136.244.69.20',
