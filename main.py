@@ -37,6 +37,6 @@ wr_update(wr_url,db_engine,master_stock_list,wr_extr,wr_xfrm)
 # export the database stock list in CVS format to be uploaded in woocommerce
 stmt = select(master_stock_list)
 df_msl = pd.read_sql_query(stmt, db_engine)
-df_msl.to_csv('sml_test', index=False) # use this for testing
-# ecom_upload(ecom_conn_config, cnopts, ecom_remote_path, df_msl) # comment it out when testing
+# df_msl.to_csv('sml_test', index=False) # use this for testing
+ecom_upload(ecom_conn_config, cnopts, ecom_remote_path, df_msl) # comment it out when testing
 
