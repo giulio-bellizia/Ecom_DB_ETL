@@ -1,47 +1,64 @@
 from sqlalchemy import MetaData, Table, Column, SmallInteger, String, Float, PrimaryKeyConstraint
 import pysftp
 import warnings
+from dotenv import load_dotenv
+import os
 
+load_dotenv('.env')
 warnings.filterwarnings('ignore')
 
 # MySQL database details
+db_user = os.getenv('DB_USER')
+db_password = os.getenv('DB_PASSWORD')
+db_host = os.getenv('DB_HOST')
+db_name = os.getenv('DB_NAME')
 db_conn_config = {
-    'user': 'Giulio',
-    'password': 'Capuozz0123!',
-    'host': 'localhost',
-    'database': 'dgt_database'
+    'user': db_user,
+    'password': db_password,
+    'host': db_host,
+    'database': db_name
 }
 
 # WP SFTP server details
+wp_host = os.getenv('WP_HOST')
+wp_username = os.getenv('WP_USERNAME')
+wp_password = os.getenv('WP_PASSWORD')
+wp_remote_path = os.getenv('WP_REMOTE_PATH')
 wp_conn_config = {
-    'host': 'sftp.wheelpros.com',
-    'username': 'Dgt_wheels1',
-    'password': 'Alphabravo01!',
+    'host': wp_host,
+    'username': wp_username,
+    'password': wp_password,
 }
-wp_remote_path = "/CommonFeed/EUR/WHEEL/wheelInvPriceData.csv"
 
-# Japan Racing url with api key to get product list
-jr_url = 'https://b2b.wheeltrade.pl/en/xmlapi/12/2/utf8/ee612fdd-4845-4c4e-b795-249514fc961f'
+# JR url with api key to get product list
+jr_url = os.getenv('JR_URL')
 
 # Wolfrace url to get product list
-wr_url = 'https://www.wolfrace.co.uk/trade/wolfrace_trade_stock.csv'
+wr_url = os.getenv('WR_URL')
 
-# DGT SFTP server details
+# Portal SFTP server details
+ecom_host = os.getenv('ECOM_HOST')
+ecom_username = os.getenv('ECOM_USERNAME')
+ecom_password = os.getenv('ECOM_PASSWORD')
+ecom_remote_path = os.getenv('ECOM_REMOTE_PATH')
 ecom_conn_config = {
-    'host': '136.244.69.20',
-    'username': 'csvsftpuser',
-    'password': 'Y8ZQ4[QMP[?FobU#!pWW',
+    'host': ecom_host,
+    'username': ecom_username,
+    'password': ecom_password,
 }
-ecom_remote_path = "/home/csvsftpuser/master_stock_list.csv"
+
 # Disable hot key checking
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None
 
 # Suppliers list
+wp_name = os.getenv('WP_NAME')
+jr_name = os.getenv('JR_NAME')
+wr_name = os.getenv('WR_NAME')
 suppliers_list = {
-    'WP': 'Wheel Pros',
-    'JR': 'Japan Racing',
-    'WR': 'Wolfrace'
+    'WP': wp_name,
+    'JR': jr_name,
+    'WR': wr_name
 }
 
 # database metadata

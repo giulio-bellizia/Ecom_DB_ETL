@@ -75,9 +75,5 @@ def wr_update(url,db_engine,db_table,fn_extr, fn_xfrm):
     df_extrxfrm.to_sql(db_table.name, con=db_engine, if_exists='append', index=False, chunksize=1024)
     print("Database updated with latest WR products")
 
-# below some code for testing purposes
-# df = wr_extr(wr_url)
-# df = wr_xfrm(df)
-# df.to_csv('wr_test', index=False)
 
 
