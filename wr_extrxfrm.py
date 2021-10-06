@@ -1,14 +1,14 @@
 # this module connects to the supplier server, retrieves
-# the updated product list and transforms it according toT
+# the updated product list and transforms it according to
 # the master stock list format
 import requests
 import pandas as pd
 import numpy as np
 import io
-from my_data import db_metadata, master_stock_list, wr_url
 from sqlalchemy import delete
+from my_data import suppliers_list
 
-# EXTRACT: connect to server and import updated product table into a dataframe
+# EXTRACT: connect to server via HTTPS and import updated product table into a dataframe
 def wr_extr(url):
     wr_list = requests.get(url)
     wr_file = io.StringIO(wr_list.content.decode('utf-8'))
@@ -42,10 +42,14 @@ def wr_xfrm(df):
     # drop non-relevant columns
     df = df[list(col_names.values())]
     # add and transform some columns
+    def sd_convert(my_str):
+        my_str = my_str.split('x')[1] + 'x' + my_str.split('x')[0]
+        return my_str
+    df['SIZE DESC'] = df['SIZE DESC'].apply(sd_convert)
     df['ITEM CODE'] = 'WR-' + df['SKU CODE (UNIQUE)']
     df['IMAGE SKU 1'] = df['ITEM CODE']
     df['IMAGE SOURCE'] = 'EXTERNAL_1'
-    df['WHEEL OWNER'] = 'Wolfrace'
+    df['WHEEL OWNER'] = suppliers_list['WR']
     df['STOCK STATUS'] = 'PRE-ORDER'
     df['PRICE MARK UP'] = 30
     df['IMPORT / DISPLAY FILTER'] = 'TRUE'
@@ -64,15 +68,16 @@ def wr_update(url,db_engine,db_table,fn_extr, fn_xfrm):
     # Transform imported supplier product list to fit master stock list
     df_extrxfrm = fn_xfrm(df_extr)
     # Delete values from old supplier list from table
-    stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == 'Wolfrace')
+    stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == suppliers_list['WR'])
     with db_engine.begin() as conn:
         conn.execute(stmt)
     # Load the updated supplier list into the database
     df_extrxfrm.to_sql(db_table.name, con=db_engine, if_exists='append', index=False, chunksize=1024)
-    print("Database updated with latest Wolfrace products")
+    print("Database updated with latest WR products")
 
+# below some code for testing purposes
 # df = wr_extr(wr_url)
 # df = wr_xfrm(df)
-# df.to_csv('wr_test9', index=False)
+# df.to_csv('wr_test', index=False)
 
 

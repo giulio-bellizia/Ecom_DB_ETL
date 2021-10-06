@@ -39,7 +39,9 @@ cnopts.hostkeys = None
 
 # Suppliers list
 suppliers_list = {
-    'WHEEL PROS': 'WP',
+    'WP': 'Wheel Pros',
+    'JR': 'Japan Racing',
+    'WR': 'Wolfrace'
 }
 
 # database metadata

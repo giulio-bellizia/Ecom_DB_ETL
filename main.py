@@ -1,4 +1,8 @@
-# this is the main program for the end-to-end ETL routine
+# main program for the end-to-end ETL routine
+# establish connection to database (create it if it does not exist)
+# create product table if it does not exist
+# extract, transform and load onto the database latest product lists from suppliers
+# download latest product list from database and save it in a SFTP repository
 from my_data import db_conn_config, ecom_conn_config, wp_conn_config, \
     ecom_remote_path, wp_remote_path, cnopts, db_metadata, master_stock_list, jr_url, wr_url
 from my_funcs import conn_db_create, ecom_upload

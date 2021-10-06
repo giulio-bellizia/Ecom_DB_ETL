@@ -4,9 +4,9 @@
 import pysftp
 import pandas as pd
 from sqlalchemy import delete
+from my_data import suppliers_list
 
-# EXTRACT: connect to server and retrieve updated table
-# Connect to SFTP server and import data into a dataframe
+# EXTRACT: connect to server via SFTP and import csv product table into a dataframe
 def wp_extr(connection_config, cnopts, remote_path):
     print("Connecting to {}...".format(connection_config['host']), end='')
     with pysftp.Connection(**connection_config, cnopts=cnopts) as mysftp:
@@ -40,9 +40,10 @@ def wp_xfrm(df):
     df.rename(columns=col_names, inplace=True)
     df = df[ list(col_names.values()) ]
     # insert certain columns not originally in the supplier table
-    df['WHEEL OWNER'] = 'WHEEL PROS'
+    df['SIZE DESC'] = df['SIZE DESC'].str.replace('X','x')
+    df['WHEEL OWNER'] = suppliers_list['WP']
     df['SIZE'] = df['SIZE DESC'].str[:2]
-    df['J WIDTH'] = df['SIZE DESC'].str.split('X').str[-1]
+    df['J WIDTH'] = df['SIZE DESC'].str.split('x').str[-1]
     df['SHIPPING (DOMESTIC)'] = 30
     df['PRICE MARK UP'] = 0
     df['TOTAL UNIQUE PRICE (MSRP + MARGIN)'] = df['MSRP']+df['PRICE MARK UP']
@@ -72,11 +73,10 @@ def wp_update(conn_config,cnopts,remote_path,db_engine,db_table,fn_extr, fn_xfrm
     df_extr = fn_extr(conn_config, cnopts, remote_path)
     # Transform imported supplier product list to fit master stock list
     df_extrxfrm = fn_xfrm(df_extr)
-    # df_extrxfrm.to_csv('sml_preDB', index=False) # delete this in prod
     # Delete values from old supplier list from table
-    stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == 'WHEEL PROS')
+    stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == suppliers_list['WP'])
     with db_engine.begin() as conn:
         conn.execute(stmt)
     # Load the updated supplier list into the database
     df_extrxfrm.to_sql(db_table.name, con=db_engine, if_exists='append', index=False, chunksize=1024)
-    print("Database updated with latest Wheel Pros products")
+    print("Database updated with latest WP products")

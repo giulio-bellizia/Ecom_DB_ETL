@@ -1,14 +1,14 @@
 # this module connects to the supplier server, retrieves
-# the updated product list and transforms it according toT
+# the updated product list and transforms it according to
 # the master stock list format
 import requests
 import pandas as pd
 import io
 from sqlalchemy import delete
-from my_data import jr_url
 import re
+from my_data import suppliers_list
 
-# EXTRACT: connect to server and import updated product table into a dataframe
+# EXTRACT: connect to server via HTTPS and import updated product table into a dataframe
 def jr_extr(url):
     jr_list = requests.get(url)
     jr_file = io.StringIO(jr_list.content.decode('utf-8'))
@@ -38,7 +38,7 @@ def jr_xfrm(df):
     # add and transform some columns
     df['ITEM CODE'] = 'JR-' + df['SKU CODE (UNIQUE)']
     df['IMAGE SKU 1'] = df['ITEM CODE']
-    df['WHEEL OWNER'] = 'Japan Racing'
+    df['WHEEL OWNER'] = suppliers_list['JR']
     df['SIZE'] = df['SIZE'].apply(lambda x: re.sub("[^0-9.]", "", x))
     df['J WIDTH'] = df['J WIDTH'].str.replace(',', '.')
     df['J WIDTH'] = df['J WIDTH'].apply(lambda x: re.sub("[^0-9.]", "", x))
@@ -52,7 +52,7 @@ def jr_xfrm(df):
     df['ET'] = df['ET'].str.replace(', ', '|')
     df['IMAGE SOURCE'] = 'EXTERNAL_1'
     df['STOCK STATUS'] = 'PRE-ORDER'
-    df['SIZE DESC'] = df['J WIDTH'] + 'X' + df['SIZE']
+    df['SIZE DESC'] = df['SIZE'] + 'x' + df['J WIDTH']
     df['CB'] = df['CB'].str.replace(', ', '|')
     return df
 
@@ -63,9 +63,9 @@ def jr_update(url,db_engine,db_table,fn_extr, fn_xfrm):
     # Transform imported supplier product list to fit master stock list
     df_extrxfrm = fn_xfrm(df_extr)
     # Delete values from old supplier list from table
-    stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == 'Japan Racing')
+    stmt = delete(db_table).where(db_table.c['WHEEL OWNER'] == suppliers_list['JR'])
     with db_engine.begin() as conn:
         conn.execute(stmt)
     # Load the updated supplier list into the database
     df_extrxfrm.to_sql(db_table.name, con=db_engine, if_exists='append', index=False, chunksize=1024)
-    print("Database updated with latest Japan Racing products")
+    print("Database updated with latest JR products")
