@@ -6,3 +6,5 @@ The database product list is created using data extracted from remote repositori
 The suppliers' product lists are transformed to conform the database format through pandas dataframe manipulations.
 
 The transformed product lists are then loaded into the database. The interface with the database is handled using the SQLAlchemy package.
+
+All sensitive data (usernames, passwords, API keys, etc...) is passed to the main application as environment variables saved in a hidden .env file using the dotenv package.
