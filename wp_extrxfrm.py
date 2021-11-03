@@ -51,6 +51,8 @@ def wp_xfrm(df):
     df['GROUP IDENTIFIER'] = df['BRAND']+' '+df['WHEEL MODEL']+' '+df['COLOUR']
     df['ITEM CODE'] = 'WP-' + df['SKU CODE (UNIQUE)']
     df['IMAGE SKU 1'] = df['ITEM CODE']
+    df['ET'] = df['ET'].str.lstrip('0')
+    df['ET'] = df['ET'].str.replace('XX', 'Custom')
     def PCD_convert(my_str):
         if 'X' in my_str:
             if '/' in my_str:

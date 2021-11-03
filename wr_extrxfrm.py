@@ -57,6 +57,8 @@ def wr_xfrm(df):
     df['TOTAL UNIQUE PRICE (MSRP + MARGIN)'] = df['MSRP'] + df['PRICE MARK UP']
     df['SHIPPING (DOMESTIC)'] = 30
     df['PCD'] = df['PCD'].str.replace('x', '/')
+    df['J WIDTH'] = df['J WIDTH'].apply(str)
+    df['J WIDTH'] = df['J WIDTH'].str.replace('\.0','')
     # drop duplicates with same SKU code
     df = df.drop_duplicates(subset=['SKU CODE (UNIQUE)'], keep='first')
     return df
