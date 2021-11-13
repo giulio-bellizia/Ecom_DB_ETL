@@ -33,8 +33,11 @@ wp_conn_config = {
 # JR url with api key to get product list
 jr_url = os.getenv('JR_URL')
 
-# Wolfrace url to get product list
+# WR url to get product list
 wr_url = os.getenv('WR_URL')
+
+# AP url to get product list
+ap_url = os.getenv('AP_URL')
 
 # Portal SFTP server details
 ecom_host = os.getenv('ECOM_HOST')
@@ -55,10 +58,12 @@ cnopts.hostkeys = None
 wp_name = os.getenv('WP_NAME')
 jr_name = os.getenv('JR_NAME')
 wr_name = os.getenv('WR_NAME')
+ap_name = os.getenv('AP_NAME')
 suppliers_list = {
     'WP': wp_name,
     'JR': jr_name,
-    'WR': wr_name
+    'WR': wr_name,
+    'AP': ap_name
 }
 
 # database metadata
