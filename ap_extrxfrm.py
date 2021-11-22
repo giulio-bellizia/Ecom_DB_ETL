@@ -21,6 +21,7 @@ def ap_xfrm(df):
         'UID': 'SKU CODE (UNIQUE)',
         'BRAND': 'BRAND',
         'IMG': 'IMAGE 1 URL',
+        '360 IMAGE': 'VIDEO 1 URL',
         'DESIGN': 'WHEEL MODEL',
         'DIAMETER': 'SIZE',
         'ET': 'ET',
@@ -49,8 +50,9 @@ def ap_xfrm(df):
     df['J WIDTH'] = df['J WIDTH'].apply(str)
     df['J WIDTH'] = df['J WIDTH'].str.replace('\.0', '')
     df['SIZE DESC'] = df['SIZE'].apply(str) + 'x' + df['J WIDTH']
-    df['SHIPPING (DOMESTIC)'] = 30
+    df['SUPPLIER LOCATION'] = 'UNITED KINGDOM'
     df['PRICE MARK UP'] = 30
+    df['MSRP'] = df['MSRP']*1.2
     df['TOTAL UNIQUE PRICE (MSRP + MARGIN)'] = df['MSRP'] + df['PRICE MARK UP']
     df['IMPORT / DISPLAY FILTER'] = 'TRUE'
     df['GROUP IDENTIFIER'] = df['BRAND'] + ' ' + df['WHEEL MODEL'] + ' ' + df['COLOUR']
