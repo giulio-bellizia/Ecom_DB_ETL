@@ -2,17 +2,18 @@
 # the updated product list and transforms it according to
 # the master stock list format
 import requests
+import os
 import pandas as pd
-import numpy as np
-import io
 from sqlalchemy import delete
-from my_data import suppliers_list
+from my_data import suppliers_path, suppliers_list
 
-# EXTRACT: connect to server via HTTP and import updated product table into a dataframe
+# EXTRACT: connect to server via HTTP and import updated product table into a local file and a dataframe
 def ap_extr(url):
-    ap_list = requests.get(url)
-    ap_file = io.StringIO(ap_list.content.decode('utf-8'))
-    product_list = pd.read_csv(ap_file)
+    product_list = pd.read_csv(url)
+    os.makedirs(suppliers_path, exist_ok=True)
+    with open(os.path.join(suppliers_path,'{}_raw_file.csv'.format(suppliers_list['AP'])),'w',newline='') as csv_file:
+        url_file = requests.get(url).content.decode('utf-8')
+        csv_file.write(url_file)
     return product_list
 
 def ap_xfrm(df):

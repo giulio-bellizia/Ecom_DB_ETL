@@ -54,6 +54,11 @@ ecom_conn_config = {
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None
 
+# Create/set suppliers raw data repository
+suppliers_raw_data_dir = os.getenv('SUPPLIERS_DATA_DIR')
+directory = 'suppliers_raw_data'
+suppliers_path = os.path.join(suppliers_raw_data_dir,directory)
+
 # Suppliers list
 wp_name = os.getenv('WP_NAME')
 jr_name = os.getenv('JR_NAME')

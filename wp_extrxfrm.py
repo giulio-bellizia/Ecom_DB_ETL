@@ -2,22 +2,25 @@
 # the updated product list and transforms it according to
 # the master stock list format
 import pysftp
+import os
 import pandas as pd
 from sqlalchemy import delete
-from my_data import suppliers_list
+from my_data import suppliers_path, suppliers_list
 
-# EXTRACT: connect to server via SFTP and import csv product table into a dataframe
+# EXTRACT: connect to server via SFTP and import csv product table into a local file and a dataframe
 def wp_extr(connection_config, cnopts, remote_path):
     print("Connecting to {}...".format(connection_config['host']), end='')
     with pysftp.Connection(**connection_config, cnopts=cnopts) as mysftp:
         if mysftp.exists(remote_path):
             print("{} found.".format(remote_path))
         # copy destination file into a pandas dataframe
-        with mysftp.open(remote_path, bufsize=32768) as csv_file:
+        with mysftp.open(remote_path, bufsize=32768) as url_file:
             print("Importing latest data from supplier...", end='')
-            product_list = pd.read_csv(csv_file)
+            product_list = pd.read_csv(url_file)
             print("{} imported.".format(remote_path))
-            mysftp.close()
+        # copy destination file into a local file
+        os.makedirs(suppliers_path, exist_ok=True)
+        mysftp.get(remote_path, os.path.join(suppliers_path, '{}_raw_file.csv'.format(suppliers_list['WP'])))
     return product_list
 
 # TRANSFORM: rename/transform/add/drop columns as per database table

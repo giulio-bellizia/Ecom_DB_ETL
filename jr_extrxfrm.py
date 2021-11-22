@@ -2,17 +2,19 @@
 # the updated product list and transforms it according to
 # the master stock list format
 import requests
+import os
 import pandas as pd
-import io
 from sqlalchemy import delete
 import re
-from my_data import suppliers_list
+from my_data import suppliers_path, suppliers_list
 
-# EXTRACT: connect to server via HTTPS and import updated product table into a dataframe
+# EXTRACT: connect to server via HTTPS and import updated product table into a local file and a dataframe
 def jr_extr(url):
-    jr_list = requests.get(url)
-    jr_file = io.StringIO(jr_list.content.decode('utf-8'))
-    product_list = pd.read_csv(jr_file, sep=';')
+    product_list = pd.read_csv(url, sep=';')
+    os.makedirs(suppliers_path, exist_ok=True)
+    with open(os.path.join(suppliers_path,'{}_raw_file.csv'.format(suppliers_list['JR'])),'w',newline='', encoding="utf-8") as csv_file:
+        url_file = requests.get(url).content.decode('utf-8')
+        csv_file.write(url_file)
     return product_list
 
 # TRANSFORM: rename/transform/add/drop columns as per database table
