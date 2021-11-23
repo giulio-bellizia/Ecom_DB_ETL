@@ -56,7 +56,7 @@ cnopts.hostkeys = None
 
 # Create/set suppliers raw data repository
 suppliers_raw_data_dir = os.getenv('SUPPLIERS_DATA_DIR')
-directory = 'suppliers_raw_data'
+directory = 'Suppliers raw data'
 suppliers_path = os.path.join(suppliers_raw_data_dir,directory)
 
 # Suppliers list

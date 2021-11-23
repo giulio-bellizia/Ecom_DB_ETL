@@ -39,7 +39,7 @@ def ap_xfrm(df):
 
     # combine columns to create PCD field
     df['PCD'] = df['HOLES'].apply(str) + '/' + df['PCD'].apply(str)
-
+    df['PCD'] = df['PCD'].str.replace('\.0', '')
     # drop non-relevant columns
     df = df[list(col_names.values())]
 
